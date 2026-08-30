@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn Way Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section id="login-screen" class="screen active">
+  <div class="login-card">
+    <div class="logo-area">
+      <div class="logo-symbol">LW</div>
+      <h1>Learn Way</h1><p>Your way to learn.</p>
+    </div>
+    <h2>Bem-vindo ao Learn Way</h2>
+    <label>Qual é o seu nome?</label>
+    <input id="name" type="text" placeholder="Digite seu nome">
+    <label>Quando você nasceu?</label>
+    <div class="birth-fields">
+      <input id="day" type="number" placeholder="DD" min="1" max="31">
+      <input id="month" type="number" placeholder="MM" min="1" max="12">
+      <input id="year" type="number" placeholder="AAAA" min="1900">
+    </div>
+    <button id="start-button" class="primary-button">Começar →</button>
+    <p class="demo-warning">Versão Demo • Seu progresso fica salvo neste dispositivo.</p>
+  </div>
+</section>
+
+<section id="app-screen" class="screen">
+  <aside class="sidebar">
+    <div>
+      <div class="sidebar-logo"><div class="logo-symbol small">LW</div><div><strong>Learn Way</strong><span>Your way to learn.</span></div></div>
+      <nav>
+        <button class="nav-button active">🏠 Início</button>
+        <button class="nav-button">📚 Matérias</button>
+        <button class="nav-button demo-feature">💬 Conversas</button>
+        <button class="nav-button demo-feature">👥 Grupos</button>
+      </nav>
+    </div>
+    <button id="reset-button" class="reset-button">Sair do Demo</button>
+  </aside>
+
+  <main class="main-content">
+    <header class="topbar">
+      <div><h1>Olá, <span id="user-name"></span>! 👋</h1><p>Continue aprendendo no seu ritmo.</p></div>
+      <button class="profile-button demo-feature">👤</button>
+    </header>
+
+    <section class="section">
+      <div class="section-title"><h2>📚 Minhas Matérias</h2><button id="add-subject-button">+ Adicionar Matéria</button></div>
+      <div id="subjects-container" class="subjects-grid"></div>
+    </section>
+
+    <section class="section">
+      <h2>📊 Meu Desempenho</h2>
+      <div class="performance-grid">
+        <article class="card">
+          <h3>Meu nível</h3><div class="current-level">🏆 Aprendiz</div><div class="xp-number">⭐ 340 XP</div>
+          <div class="progress-bar"><div class="progress-fill" style="width:34%"></div></div><small>340 / 1.000 XP</small>
+          <div class="levels-list"><span class="level-active">Aprendiz</span><span>Iniciante</span><span>Aluno 1</span><span>Aluno 2</span><span>Aluno 3</span><span>Entendedor</span><span>Esperto</span><span>Inteligente</span><span>Mini Gênio</span><span>Gênio</span></div>
+        </article>
+        <article class="card"><h3>Minhas Medalhas</h3><div class="medals-grid"><div class="medal">🏅<span>Primeiro Passo</span></div><div class="medal">🔥<span>Persistente</span></div><div class="medal locked">🔒<span>Bloqueada</span></div><div class="medal locked">🔒<span>Bloqueada</span></div></div></article>
+        <article class="card"><h3>Gráfico de Matérias</h3><div id="subject-chart"></div></article>
+      </div>
+    </section>
+
+    <section class="tip-card"><div class="tip-icon">💡</div><div><h3>Dica do Learn Way</h3><p>Você ganha XP principalmente quando demonstra evolução.</p></div></section>
+  </main>
+
+  <nav class="mobile-nav"><button class="active">🏠<span>Início</span></button><button>📚<span>Matérias</span></button><button class="demo-feature">💬<span>Chats</span></button><button class="demo-feature">👤<span>Perfil</span></button></nav>
+</section>
+
+<div id="demo-modal" class="modal"><div class="modal-content"><div class="modal-icon">🚧</div><h2>Função em desenvolvimento</h2><p>Esta função ainda não está disponível na versão Demo do Learn Way.</p><button id="close-modal" class="primary-button">Entendi</button></div></div>
+
+<div id="subject-modal" class="modal"><div class="modal-content"><h2>Adicionar Matéria</h2><p>Escolha uma matéria para começar.</p><div class="subject-options">
+<button data-subject="Matemática" data-icon="🧮">🧮 Matemática</button><button data-subject="Português" data-icon="📖">📖 Português</button><button data-subject="História" data-icon="🏛️">🏛️ História</button><button data-subject="Geografia" data-icon="🌎">🌎 Geografia</button><button data-subject="Ciências" data-icon="🔬">🔬 Ciências</button><button data-subject="Inglês" data-icon="🌐">🌐 Inglês</button><button data-subject="Programação" data-icon="💻">💻 Programação</button><button data-subject="Artes" data-icon="🎨">🎨 Artes</button>
+</div><button id="close-subject-modal" class="secondary-button">Cancelar</button></div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
